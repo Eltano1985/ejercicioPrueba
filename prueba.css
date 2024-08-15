@@ -2,24 +2,40 @@ body {
     background-color: whitesmoke;
     display: grid;
     justify-items: center;
+    
 }
 
 #contenedor-calculadora{
     background-color: gray;
     width: 250px;
+        
 }
 
 #contenedor-calculadora > input {
-    width: 100px;
+    width: 99%;
+    height: 30px;
+    background-color: darkgray;
+    padding: 0%;
+    border: 1px solid black;
+    font-size: x-large;
+           
 }
 
 #contenedor-opciones{
-    background-color: rgb(255, 252, 47);
+    background-color: yellowgreen;
     display: grid;
     justify-items: center;
+    border: 2px solid black;
+    padding: 5px;
+    
 }
 
-button{
+.fila > button{
     width: 50px;
     height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: larger;
+
 }
