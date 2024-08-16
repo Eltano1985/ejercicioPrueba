@@ -10,9 +10,16 @@ function actualizarVentana(boton) {
 }
 
 function limpiarPantalla() {
-    if (boton.innerHTML === "C") {
-        
-        
+        inputOperaciones.value = "";
     }
     
-}
+function borrarUltimo() {
+        inputOperaciones.value = inputOperaciones.value.slice(0,-1);
+    }
+
+function evitarDuplicado() {
+
+}    
+    
+
+   
