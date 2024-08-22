@@ -6,10 +6,11 @@ const OPCION_BORRAR_ULTIMO = "←";
 const PANTALLA_VACIA = "";
 const OPERADORES = "+-*/";
 const NUMEROS = "0123456789";
+const OPCION_RAIZ_CUADRADA = "√"
 
 function actualizarVentana(boton) {
     let ultimoCaracter = inputOperaciones.value[inputOperaciones.value.length-1];
-    if (!OPERADORES.includes(ultimoCaracter)) || (NUMEROS.includes(boton.innerHTML)) {
+    if ((!OPERADORES.includes(ultimoCaracter)) || (NUMEROS.includes(boton.innerHTML))) {
         switch (boton.innerHTML) {
             case OPCION_RESULTADO:
                 inputOperaciones.value = eval(inputOperaciones.value);
@@ -20,9 +21,12 @@ function actualizarVentana(boton) {
             case OPCION_BORRAR_ULTIMO:
                 inputOperaciones.value = inputOperaciones.value.slice(0,-1);
                 break;
+            case OPCION_RAIZ_CUADRADA:
+                inputOperaciones.value = Math. sqrt(inputOperaciones.value);
             default:
                 inputOperaciones.value += boton.innerHTML;    
                 break;
+           
         }  
     }else{
         alert("opcion no permitida")
