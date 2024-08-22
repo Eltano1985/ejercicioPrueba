@@ -4,7 +4,7 @@ const OPCION_RESULTADO = "=";
 const OPCION_LIMPIAR = "C";
 const OPCION_BORRAR_ULTIMO = "←";
 const PANTALLA_VACIA = "";
-const OPERADORES = "+-*/";
+const OPERADORES = "+-*/√";
 const NUMEROS = "0123456789";
 const OPCION_RAIZ_CUADRADA = "√"
 
@@ -22,7 +22,7 @@ function actualizarVentana(boton) {
                 inputOperaciones.value = inputOperaciones.value.slice(0,-1);
                 break;
             case OPCION_RAIZ_CUADRADA:
-                inputOperaciones.value = Math. sqrt(inputOperaciones.value);
+                inputOperaciones.value = Math.sqrt(inputOperaciones.value) ;
             default:
                 inputOperaciones.value += boton.innerHTML;    
                 break;
